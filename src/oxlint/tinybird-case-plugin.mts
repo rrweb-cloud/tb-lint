@@ -26,10 +26,6 @@ interface RuleMeta {
   messages: Record<string, string>;
 }
 
-interface NodeContext {
-  id: (node: any) => void;
-}
-
 interface RuleContext {
   report: (options: {
     node: any;
@@ -38,9 +34,13 @@ interface RuleContext {
   }) => void;
 }
 
+interface NodeVisitor {
+  [key: string]: (node: any) => void;
+}
+
 interface Rule {
   meta: RuleMeta;
-  create: (context: RuleContext) => NodeContext;
+  create: (context: RuleContext) => NodeVisitor;
 }
 
 // Rule 1: Enforce camelCase for JSON keys in object literals
