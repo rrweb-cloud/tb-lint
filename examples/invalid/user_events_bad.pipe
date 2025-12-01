@@ -1,0 +1,10 @@
+# Example of INVALID pipe with naming violations
+
+NODE user_event_counts
+SQL >
+    SELECT
+        userId AS user_id,
+        event_name AS event_name,
+        COUNT(*) AS count
+    FROM events
+    GROUP BY userId, event_name
