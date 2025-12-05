@@ -1,0 +1,8 @@
+{
+  "$schema": "https://oxc.rs/schema.json",
+  "jsPlugins": ["./dist/oxlint/tinybird-case-plugin.mjs"],
+  "rules": {
+    "tinybird-case/camel-case-json-keys": "error",
+    "tinybird-case/camel-snake-mapping": "error"
+  }
+}

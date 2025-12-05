@@ -1,0 +1,10 @@
+# Example of INVALID datasource with naming violations
+
+SCHEMA >
+    userId String,
+    sessionId String,
+    event_name String,
+    EventTimestamp DateTime,
+    user_agent String
+
+ENGINE MergeTree

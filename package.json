@@ -1,0 +1,42 @@
+{
+  "name": "@tinybird/tb-lint",
+  "version": "1.0.0",
+  "description": "Linting tools to enforce consistent naming conventions between Tinybird (snake_case) and API code (camelCase)",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "tb-lint": "./dist/tb-lint/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "lint": "oxlint --config .oxlintrc.json",
+    "tb-lint": "node --loader ts-node/esm src/tb-lint/index.mts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "ci": "npm run typecheck && npm run build && npm run test && npm run lint"
+  },
+  "keywords": [
+    "tinybird",
+    "linting",
+    "naming-conventions",
+    "camelCase",
+    "snake_case",
+    "oxlint"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/parser": "^6.13.0",
+    "@vitest/coverage-v8": "^1.6.1",
+    "oxlint": "^0.2.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3",
+    "vitest": "^1.0.4"
+  },
+  "dependencies": {
+    "chalk": "^5.3.0",
+    "glob": "^10.3.10"
+  }
+}

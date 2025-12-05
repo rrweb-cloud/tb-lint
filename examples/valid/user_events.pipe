@@ -1,0 +1,25 @@
+# Example of a valid Tinybird pipe with proper naming conventions
+# - Columns are snake_case
+# - Aliases are camelCase for API output
+
+NODE user_event_counts
+SQL >
+    SELECT
+        user_id AS userId,
+        event_name AS eventName,
+        COUNT(*) AS eventCount,
+        MAX(event_timestamp) AS lastEventTime
+    FROM events
+    WHERE event_timestamp >= now() - INTERVAL 7 DAY
+    GROUP BY user_id, event_name
+    ORDER BY eventCount DESC
+
+NODE recent_users
+SQL >
+    SELECT
+        userId,
+        eventName,
+        eventCount,
+        lastEventTime
+    FROM user_event_counts
+    WHERE eventCount > 10

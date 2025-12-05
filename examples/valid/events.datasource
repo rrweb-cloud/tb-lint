@@ -1,0 +1,14 @@
+# Example of a valid Tinybird datasource with proper snake_case columns
+
+SCHEMA >
+    user_id String,
+    session_id String,
+    event_name String,
+    event_timestamp DateTime,
+    user_agent String,
+    ip_address String,
+    created_at DateTime DEFAULT now()
+
+ENGINE MergeTree
+ENGINE_PARTITION_KEY toYYYYMM(created_at)
+ENGINE_SORTING_KEY user_id, created_at
