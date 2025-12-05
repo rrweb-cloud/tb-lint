@@ -14,7 +14,10 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
-    "ci": "npm run typecheck && npm run build && npm run test && npm run lint"
+    "ci": "npm run typecheck && npm run build && npm run test && npm run lint",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "npm run build && changeset publish"
   },
   "keywords": [
     "tinybird",
@@ -27,6 +30,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "@changesets/cli": "^2.29.8",
     "@types/node": "^20.10.0",
     "@typescript-eslint/parser": "^6.13.0",
     "@vitest/coverage-v8": "^1.6.1",
