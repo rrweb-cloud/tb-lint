@@ -1,5 +1,5 @@
 {
-  "name": "@tinybird/tb-lint",
+  "name": "@rrwebcloud/tb-lint",
   "version": "1.0.0",
   "description": "Linting tools to enforce consistent naming conventions between Tinybird (snake_case) and API code (camelCase)",
   "type": "module",

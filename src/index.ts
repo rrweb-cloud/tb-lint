@@ -1,5 +1,5 @@
 /**
- * @tinybird/tb-lint
+ * @rrwebcloud/tb-lint
  *
  * Linting tools to enforce consistent naming conventions
  * between Tinybird (snake_case) and API code (camelCase)

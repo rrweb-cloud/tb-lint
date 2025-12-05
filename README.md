@@ -108,7 +108,7 @@ FROM events
 ## Installation
 
 ```bash
-npm install --save-dev @tinybird/tb-lint
+npm install --save-dev @rrwebcloud/tb-lint
 ```
 
 ## Usage
@@ -119,7 +119,7 @@ npm install --save-dev @tinybird/tb-lint
 
 ```json
 {
-  "jsPlugins": ["./node_modules/@tinybird/tb-lint/dist/oxlint/tinybird-case-plugin.mjs"],
+  "jsPlugins": ["./node_modules/@rrwebcloud/tb-lint/dist/oxlint/tinybird-case-plugin.mjs"],
   "rules": {
     "tinybird-case/camel-case-json-keys": "error",
     "tinybird-case/camel-snake-mapping": "error"
@@ -165,7 +165,7 @@ npx tb-lint -v
 ### Programmatic Usage
 
 ```typescript
-import { lintTinybirdFiles } from '@tinybird/tb-lint/tb-lint';
+import { lintTinybirdFiles } from '@rrwebcloud/tb-lint/tb-lint';
 
 const exitCode = await lintTinybirdFiles({
   path: './tinybird',

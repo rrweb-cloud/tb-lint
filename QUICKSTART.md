@@ -5,7 +5,7 @@ Get up and running with tb-lint in 5 minutes!
 ## Installation
 
 ```bash
-npm install --save-dev @tinybird/tb-lint
+npm install --save-dev @rrwebcloud/tb-lint
 ```
 
 ## Basic Setup
@@ -16,7 +16,7 @@ Create `.oxlintrc.json` in your project root:
 
 ```json
 {
-  "jsPlugins": ["./node_modules/@tinybird/tb-lint/dist/oxlint/tinybird-case-plugin.mjs"],
+  "jsPlugins": ["./node_modules/@rrwebcloud/tb-lint/dist/oxlint/tinybird-case-plugin.mjs"],
   "rules": {
     "tinybird-case/camel-case-json-keys": "error",
     "tinybird-case/camel-snake-mapping": "error"
@@ -196,7 +196,7 @@ jobs:
 Make sure the path in `.oxlintrc.json` is correct:
 ```json
 {
-  "jsPlugins": ["./node_modules/@tinybird/tb-lint/dist/oxlint/tinybird-case-plugin.mjs"]
+  "jsPlugins": ["./node_modules/@rrwebcloud/tb-lint/dist/oxlint/tinybird-case-plugin.mjs"]
 }
 ```
 
@@ -209,7 +209,7 @@ npx tb-lint ./tinybird
 
 Or install globally:
 ```bash
-npm install -g @tinybird/tb-lint
+npm install -g @rrwebcloud/tb-lint
 ```
 
 ### False positives
